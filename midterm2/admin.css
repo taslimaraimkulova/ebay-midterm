@@ -1,0 +1,82 @@
+aside {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    overflow: auto;
+    background-color: #fff;
+    box-shadow: 0 0 30px 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-header h3 {
+    color: #333;
+    font-size: 17px;
+    margin: 0px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    font-weight: 600;
+}
+
+.sidebar-header h3 img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+#sidebar ul li {
+    padding: 2px 0px;
+}
+
+#sidebar ul li.active>a {
+    color: #4c7cf3;
+    background-color: #DBE5FD;
+}
+
+#sidebar ul li.active>a i {
+    color: #4c7cf3;
+}
+
+#sidebar ul li a:hover {
+    color: #4c7cf3;
+    background-color: #DBE5FD;
+}
+
+#sidebar ul li a {
+    padding: 5px 10px 5px 20px;
+    line-height: 30px;
+    font-size: 15px;
+    position: relative;
+    font-weight: 400;
+    display: block;
+    color: #777777;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+#sidebar ul li a i {
+    position: relative;
+    margin-right: 10px;
+    top: 6px;
+}
+
+.manage {
+    position: absolute;
+    right: 25%;
+}
+
+.manage__header {
+    background: #353b48;
+    color: #fff;
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 0px 0px 0 0;
+    margin: 5px 0 0;
+    font-size: 17px;
+}
