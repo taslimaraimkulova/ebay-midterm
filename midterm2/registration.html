@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="registration.css">
+
+	<script src="https://kit.fontawesome.com/42b8e79ae1.js" crossorigin="anonymous"></script>
+
+	<title>Register: Create a personal account</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header__b-left">
+			<a href="ebay.com" class="header__b-left__logo">
+				<img src="./img/ebay.png" alt="ebay" class="header__b-left__logo_image">
+			</a>
+		</div>
+
+		<div class="header__b-right">
+			<p class="header__b-right__sign-in">Already a member?  <span><a href="login.html">Sign in</a></span></p>
+		</div>
+	</header>
+
+	<main class="main">
+		<article class="main__article">
+			<section class="main__article__head">
+				<h1 class="main__article__head__header">Create an account</h1>
+				<div class="main__article__head__variants">
+					<input type="radio" name="acc-type" id="acc-type" checked class="main__article__head__variants__personal">
+					<label for="acc-type">Personal account</label>	
+					<input type="radio" name="acc-type" id="acc-type" class="main__article__head__variants__business">
+					<label for="acc-type">Business account</label>
+					<i class="fas fa-info-circle"></i>
+				</div>
+			</section>
+
+			<section class="main__article__block">
+				<div class="main__article__block__left">
+					<form class="main__article__block__left__form">
+						<div class="main__article__block__left__form__fisrt">
+							<input type="text" name="fname" id="fname" placeholder="First Name" class="main__article__block__left__form__fname">
+							<span class="error-message1"></span>
+						</div>
+						
+						<div class="main__article__block__left__form__second">
+							<input type="text" name="lname" id="lname" placeholder="Last Name" class="main__article__block__left__form__lname">
+							<span class="error-message2"></span>
+						</div>
+
+						<div class="main__article__block__left__form__third">
+							<input type="text" name="email" id="email" placeholder="Email" class="main__article__block__left__form__email">
+							<span class="error-message3"></span>
+						</div>
+
+						<div class="main__article__block__left__form__fourth">
+							<div class="main__article__block__left__form__fourth__input">
+								<input type="password" name="password" id="password" placeholder="Password" class="main__article__block__left__form__fourth__input__password">
+								<span class="error-message4"></span>
+							</div>
+
+							<div class="main__article__block__left__form__fourth__checkbox">
+								<input type="checkbox" name="show" id="show" class="main__article__block__left__form__fourth__checkbox__show">
+								<label for="show">Show</label>
+							</div>
+						</div>
+						
+						<div class="main__article__block__left__form__fifth">
+							<p>By <b>Creating an account</b>, you agree to our <a href="https://pages.ebay.com/KZ/en-US/help/policies/user-agreement.html" target="_blank" title="link opens in new window">User Agreement</a> and acknowledge reading our <a href="https://pages.ebay.com/KZ/en-US/help/policies/privacy-policy.html" target="_blank" title="link opens in new window">User Privacy Notice</a>.</p>
+						</div>
+
+						<div class="main__article__block__left__form__sixth">
+							<input type="submit" name="submit" value="Create account" disabled class="main__article__block__left__form__sixth__submit">
+						</div>
+					</form>
+				</div>
+
+				<span class="main__article__block__separator">
+					<span class="main__article__block__separator__vline"></span>
+					<span class="main__article__block__separator__text">or</span>
+				</span>
+
+				<div class="main__article__block__right">
+					<div class="main__article__block__right__first">
+						<button class="main__article__block__right__first__google">Continue with Google</button>
+					</div>
+
+					<div class="main__article__block__right__second">
+						<button class="main__article__block__right__second__facebook">Continue with Facebook</button>
+					</div>
+
+					<div class="main__article__block__right__third">
+						<button class="main__article__block__right__third__apple">Continue with Apple</button>
+					</div>
+				</div>
+			</section>
+		</article>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__info">
+			<p class="footer__info__text">
+				Copyright © 1995-2021 eBay Inc. All Rights Reserved. <a href="https://www.ebayinc.com/accessibility/">Accessibility</a>, <a href="https://pages.ebay.com/help/policies/user-agreement.html">User Agreement</a>, <a href="https://pages.ebay.com/help/policies/privacy-policy.html">Privacy</a>, <a href="https://pages.ebay.com/help/account/cookies-web-beacons.html">Cookies</a>, <a href="https://www.ebay.com/adchoice/ccpa">Do not sell my personal information</a> and <a href="https://www.ebay.com/adchoice" id="gf-AdChoice">AdChoice</a>
+			</p>
+		</div>
+		
+		<div class="footer__bottom">
+			<a href="https://seal.digicert.com/seals/popup/?tag=BIEBu4RK&amp;url=www.ebay.com&amp;lang=en&amp;cbr=1638520215053">
+				<img src="./img/norton.png" alt="norton" class="footer__bottom__icon">
+			</a>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="registration.js"></script>
+	<!-- PassForEbay0367* -->
+</body>
+</html>
