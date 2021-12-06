@@ -22,6 +22,9 @@ function findMaxIndex() {
 		var x = JSON.parse(localStorage.getItem(i));
 		maxIndex = i;
 	}
+	if (maxIndex === 0) {
+		maxIndex = -1;
+	}	
 	return maxIndex;
 };
 
