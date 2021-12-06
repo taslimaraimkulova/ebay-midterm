@@ -46,5 +46,5 @@ $(".main__article__block__top__form__second__submit_p").on("click", function(eve
 	if (email.val() === admin.email && password.val() === admin.password) {
 		window.location.href = "admin.html";
 	}
-	// window.location.href = "index.html"
+	window.location.href = "../main.html"
 });
