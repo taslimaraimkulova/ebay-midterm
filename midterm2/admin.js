@@ -29,13 +29,24 @@ function edit(button) {
     for (let i = 0; i < 4; i++) {
         button.parentElement.parentElement.cells[i].setAttribute("contenteditable", "true");
     }
-    console.log(button.parentElement.parentElement.cells[3].innerText);
     button.innerText = "Save";
     button.setAttribute("onclick", "save(this)");
 };
 
 function save(button) {
+    var formData = {
+        fname: button.parentElement.parentElement.cells[0].innerText,
+        lname: button.parentElement.parentElement.cells[1].innerText,
+        email: button.parentElement.parentElement.cells[2].innerText,
+        password: button.parentElement.parentElement.cells[3].innerText
+    };
 
+    var index = button.parentElement.parentElement.rowIndex;
+
+    localStorage.setItem(index - 1, JSON.stringify(formData));
+
+    button.innerText = "Edit";
+    button.setAttribute("onclick", "edit(this)");
 }
 
 function onDelete(button) {

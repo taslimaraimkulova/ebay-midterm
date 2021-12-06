@@ -1,11 +1,19 @@
 var email = $("#email");
 var password = $("#password");
 
+var admin = {
+	fname: "admin",
+	lname: "admin",
+	email: "admin@admin.com",
+	password: "Adminadmin1!"
+};
+
 $(".main__article__block__top__form__second__submit_e").on("click", function(event) {
 	event.preventDefault();
 
 	for (let i = 0; i < localStorage.length; i++) {
 		var user = JSON.parse(localStorage.getItem(i));
+
 		if (user.email == email.val()) {
 			$("#log").css("display", "none");
 			$("#pass").css("display", "block");
@@ -34,5 +42,9 @@ $(".main__article__block__top__form__first__password").on("change", function() {
 $(".main__article__block__top__form__second__submit_p").on("click", function(event) {
 	event.preventDefault();
 	alert("you are successfully logged in");
-	// window.location.href = "index.html"
+
+	if (email.val() === admin.email && password.val() === admin.password) {
+		window.location.href = "admin.html";
+	}
+	window.location.href = "../main.html"
 });

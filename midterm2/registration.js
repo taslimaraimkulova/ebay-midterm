@@ -8,6 +8,38 @@ var password = $("#password");
 var boolPassword = false;
 var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+var maxIndex = 0;
+
+var admin = {
+	fname: "admin",
+	lname: "admin",
+	email: "admin@admin.com",
+	password: "Adminadmin1!"
+};
+
+function findMaxIndex() {
+	for (let i = 0; i < localStorage.length; i++) {
+		var x = JSON.parse(localStorage.getItem(i));
+		maxIndex = i;
+	}
+	return maxIndex;
+};
+
+window.addEventListener("load", function(event) {
+	var flag = false;
+	if (localStorage.length > 0) {
+		for (let i = 0; i < localStorage.length; i++) {
+			var user = JSON.parse(localStorage.getItem(i));
+			if (user.email == admin.email && user.password == admin.password) {
+				flag = true;
+			}
+		}
+		if (!flag) {
+			localStorage.setItem(findMaxIndex() + 1, JSON.stringify(admin));
+		}
+	}
+});
+
 
 fname.on("change", function() {
 	if (fname.val().length === 0) {
@@ -119,13 +151,17 @@ $(".main__article__block__left__form__sixth__submit").on("click", function(event
 			password: ppassword,
 		};
 
-		localStorage.setItem(localStorage.length, JSON.stringify(formData));
+		if (formData.fname === admin.fname && formData.lname === admin.lname && formData.email === admin.email && formData.password === admin.password) {
+			window.location.href = "admin.html";
+		}
+
+		localStorage.setItem(findMaxIndex() + 1, JSON.stringify(formData));
 
 		alert("good");
 
 		
 		
 	    // document.location.reload(true);
-	    // window.location.href = "index.html"
+	    window.location.href = "../main.html"
 });
 
