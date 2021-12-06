@@ -162,6 +162,6 @@ $(".main__article__block__left__form__sixth__submit").on("click", function(event
 		
 		
 	    // document.location.reload(true);
-	    // window.location.href = "index.html"
+	    window.location.href = "../main.html"
 });
 
